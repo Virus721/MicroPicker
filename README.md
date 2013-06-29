@@ -4,6 +4,7 @@ MicroPicker
 ### Presentation ###
 
 MicroPicker allows a user to turn an HTML element into a hue picker which can be linked to an input. This plugin aims at being very flexible and easy to incrust into any interface without forcing the user to have a pop-up of predefined style and size.
+A new hue is picked when the user clicks on thepicker or moves the mouse over it while the left mouse button is pressed.
 
 - Licence : MIT
 
@@ -22,10 +23,10 @@ MicroPicker allows a user to turn an HTML element into a hue picker which can be
 </table>
 
 
-
 ### Synopsis ###
 
 The color picker can be either horizontal or vertical depending on its CSS class. Use either "Horizontal" or "Vertical", at least one, not both. For the CSS to work, the element must also have the class "MicroPicker".
+The HSL values are in the domains [0..360], [0%..100%], and [0%..100%] respectivly.
 
 
     $.fn.microPicker(options)
