@@ -1,6 +1,8 @@
 MicroPicker
 ===========
 
+<iframe width="100%" height="300" src="http://jsfiddle.net/MnD4k/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 ### Presentation ###
 
 MicroPicker allows a user to turn an HTML element into a hue picker which can be linked to an input. This plugin aims at being very flexible and easy to incrust into any interface without forcing the user to have a pop-up of predefined style and size.
