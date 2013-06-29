@@ -28,7 +28,7 @@ A new hue is picked when the user clicks on thepicker or moves the mouse over it
 ### Synopsis ###
 
 The color picker can be either horizontal or vertical depending on its CSS class. Use either "Horizontal" or "Vertical", at least one, not both. For the CSS to work, the element must also have the class "MicroPicker".
-The HSL values are in the domains [0..360], [0%..100%], and [0%..100%] respectivly.
+The HSL values are in the domains [0..360], [0%..100], and [0%..100] respectivly.
 
 
     $.fn.microPicker(options)
