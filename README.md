@@ -50,7 +50,7 @@ The parameter "options" may contain the following properties;
 Horizontal picker :
 
     <div id="hPicker" class="MicroPicker Horizontal"></div>
-    <input type="text" />
+    <input id="hInput" type="text" />
 
     $('#hPicker').microPicker({
         input: $('#hInput'),
@@ -64,7 +64,7 @@ Horizontal picker :
 Vertical picker :
 
     <div id="vPicker" class="MicroPicker Vertical"></div>
-    <input type="text" />
+    <input id="vInput" type="text" />
 
     $('#vPicker').microPicker({ input: document.getElementById('vInput') });
     
