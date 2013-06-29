@@ -37,7 +37,7 @@ The parameter "options" may contain the following properties;
 + <b>input</b> : The input element to be linked to the picker. It can be either a raw DOM element or a jQuery collection, in which case only the first element will be considered.
 + <b>initial</b> : Initial hue value between 0 and 360.
 + <b>format</b> : String to be used to determine the value to be set into the associated input or passed to the given callback. "{H}" will be replaced by the hue, "{S}" by the saturation, and "{L}" by the lightness. If no formatting string is provided, a default one will be used : "hsl(hue,saturation%,lightness%)" which can be directly used with css.
-+ <b>callback</b> : A function to be called everytime anew value is picked (i.e on mouse move and if mouse button is down). The function will be passed two parameters :
++ <b>callback</b> : A function to be called everytime a new value is picked (i.e on click or on mouse move and if mouse button is down). The function will be passed two parameters :
     + <b>e</b> : The event object;
     + <b>data</b> : An object containing details about the color :
         + <b>h</b> : Hue;
