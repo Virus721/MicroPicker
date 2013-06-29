@@ -3,7 +3,7 @@ MicroPicker
 
 ### Presentation ###
 
-MicroPicker allows a user to turn an HTML element into a hue picker which can be linked to an input. This plugins aims at being very flexible and easy to incrust into any interface without forcing the user to have a pop-up of predefined style and size.
+MicroPicker allows a user to turn an HTML element into a hue picker which can be linked to an input. This plugin aims at being very flexible and easy to incrust into any interface without forcing the user to have a pop-up of predefined style and size.
 
 - Licence : MIT
 
