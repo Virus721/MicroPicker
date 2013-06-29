@@ -55,7 +55,7 @@ Horizontal picker :
     $('#hPicker').microPicker({
         input: $('#hInput'),
         initial: 180,
-        format: 'HUE: {H} / SATURATION: {S} / LIGHTNESS: {L}',
+        format: 'hsl({H},{S}%,{L}%)',
         callback: function(e, data) {
             document.body.style.background = data.hsl;
         }
