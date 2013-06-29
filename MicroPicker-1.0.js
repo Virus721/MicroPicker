@@ -41,9 +41,13 @@
 
         var $input = null;
 
-        if(settings.input && ! settings.input.jquery) {
-            $input = $(settings.input)
-                .attr('value', microPicker.formatHsl(settings.initial, settings.format));
+        if(settings.input) {
+		    if( ! settings.input.jquery) {
+			    $input = $(settings.input);
+			} else {
+			    $input = settings.input;
+			}
+            $input.attr('value', microPicker.formatHsl(settings.initial, settings.format));
         }
 
         $(window).on({
@@ -66,7 +70,7 @@
             if($input || settings.callback) {
                 formatted = microPicker.formatHsl(hue, settings.format);
                 if($input) {
-                    input.attr('value', formatted);
+                    $input.attr('value', formatted);
                 }
                 if(settings.callback) {
                     settings.callback(e, { h: hue, s: 100, l: 50, hsl: formatted });
