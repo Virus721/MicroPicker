@@ -18,70 +18,70 @@
  */
 (function($) {
 
-	var microPicker = {
+    var microPicker = {
 
-		isLmbDown: false,
+        isLmbDown: false,
 
-		formatHsl: function(hue, format) {
-			return format
-				.replace('{H}', Math.round(hue * 100) / 100)
-				.replace('{S}', 100)
-				.replace('{L}', 50);
-		}
-	};
+        formatHsl: function(hue, format) {
+            return format
+                .replace('{H}', Math.round(hue * 100) / 100)
+                .replace('{S}', 100)
+                .replace('{L}', 50);
+        }
+    };
 
-	$.fn.microPicker = function(options) {
+    $.fn.microPicker = function(options) {
 
-		var $picker = $(this).first();
+        var $picker = $(this).first();
 
-		var settings = $.extend({
-			initial: 0,
-			format: 'hsl({H},{S}%,{L}%)',
-		}, options);
+        var settings = $.extend({
+            initial: 0,
+            format: 'hsl({H},{S}%,{L}%)',
+        }, options);
 
-		var $input = null;
+        var $input = null;
 
-		if(settings.input && ! settings.input.jquery) {
-			$input = $(settings.input)
-				.attr('value', microPicker.formatHsl(settings.initial, settings.format));
-		}
+        if(settings.input && ! settings.input.jquery) {
+            $input = $(settings.input)
+                .attr('value', microPicker.formatHsl(settings.initial, settings.format));
+        }
 
-		$(window).on({
-			mouseup: function() { microPicker.isLmbDown = false; },
-			mousedown: function() { microPicker.isLmbDown = true; }
-		});
+        $(window).on({
+            mouseup: function() { microPicker.isLmbDown = false; },
+            mousedown: function() { microPicker.isLmbDown = true; }
+        });
 
-		var handler = function(e) {
+        var handler = function(e) {
 
-			var formatted, hue;
+            var formatted, hue;
 
-			if($picker.hasClass('Horizontal')) {
-				hue = ((e.pageX - $picker.offset().left) / $picker.width()) * 360;
-			}else if($picker.hasClass('Vertical')) {
-				hue = ((e.pageY - $picker.offset().top) / $picker.height()) * 360;
-			} else {
-				throw 'One of the following CSS classes is required : "Horizontal", "Vertical"';
-			}
+            if($picker.hasClass('Horizontal')) {
+                hue = ((e.pageX - $picker.offset().left) / $picker.width()) * 360;
+            }else if($picker.hasClass('Vertical')) {
+                hue = ((e.pageY - $picker.offset().top) / $picker.height()) * 360;
+            } else {
+                throw 'One of the following CSS classes is required : "Horizontal", "Vertical"';
+            }
 
-			if($input || settings.callback) {
-				formatted = microPicker.formatHsl(hue, settings.format);
-				if($input) {
-					input.attr('value', formatted);
-				}
-				if(settings.callback) {
-					settings.callback(e, { h: hue, s: 100, l: 50, hsl: formatted });
-				}
-			}
-		};
+            if($input || settings.callback) {
+                formatted = microPicker.formatHsl(hue, settings.format);
+                if($input) {
+                    input.attr('value', formatted);
+                }
+                if(settings.callback) {
+                    settings.callback(e, { h: hue, s: 100, l: 50, hsl: formatted });
+                }
+            }
+        };
 
-		return this.on({
-			mousemove: function(e) {
-				if(microPicker.isLmbDown) {
-					handler(e);
-				}
-			},
-			mouseup: handler
-		});
-	};
+        return this.on({
+            mousemove: function(e) {
+                if(microPicker.isLmbDown) {
+                    handler(e);
+                }
+            },
+            mouseup: handler
+        });
+    };
 
 })(jQuery);
