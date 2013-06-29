@@ -1,15 +1,13 @@
 MicroPicker
 ===========
 
-Presentation
-------------
+### Presentation ###
 
 MicroPicker allows a user to turn an HTML element into a hue picker which can be linked to an input. This plugins aims at being very flexible and easy to incrust into any interface without forcing the user to have a pop-up of predefined style and size.
 
 - Licence : MIT
 
-Compatibility
--------------
+### Compatibility ###
 
 - Requires jQuery (old versions should work fine);
 - Uses CSS3 gradiants;
@@ -25,8 +23,7 @@ Compatibility
 
 
 
-Synopsis
---------
+### Synopsis ###
 
 The color picker can be either horizontal or vertical depending on its CSS class. Use either "Horizontal" or "Vertical", at least one, not both. For the CSS to work, the element must also have the class "MicroPicker".
 
@@ -45,8 +42,7 @@ The parameter "options" may contain the following properties;
         + <b>l</b> : Lightness;
         + <b>hsl</b> : Formatted string.
   
-Usage examples
---------------
+### Usage examples ###
 
 Horizontal picker :
 
