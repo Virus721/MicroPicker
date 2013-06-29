@@ -1,7 +1,7 @@
 MicroPicker
 ===========
 
-DEMO : http://jsfiddle.net/MnD4k/
+DEMO : http://jsfiddle.net/MnD4k/embedded/result/
 
 ### Presentation ###
 
