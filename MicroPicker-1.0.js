@@ -42,11 +42,11 @@
         var $input = null;
 
         if(settings.input) {
-		    if( ! settings.input.jquery) {
-			    $input = $(settings.input);
-			} else {
-			    $input = settings.input;
-			}
+            if( ! settings.input.jquery) {
+                $input = $(settings.input);
+            } else {
+                $input = settings.input;
+            }
             $input.attr('value', microPicker.formatHsl(settings.initial, settings.format));
         }
 
